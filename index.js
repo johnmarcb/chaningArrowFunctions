@@ -8,11 +8,15 @@ const playList = [
   { title: 'Learn to Code', dur: '13:55' },
 ];
 
-const learnToCodeList = playList.filter(function (codeList) {
-  return codeList.title.indexOf('Learn to Code') > -1;
+// const learnToCodeList = playList.filter(function (codeList) {
+//   return codeList.title.indexOf('Learn to Code') > -1;
+// });
+const learnToCodeList = playList.filter((playList) => {
+  return playList.title.indexOf('Learn to Code') > -1;
 });
 
 const durations = learnToCodeList.map(function (playDuration) {
   return playDuration.dur;
 });
-console.table(durations);
+// console.table(durations);
+console.table(learnToCodeList);
